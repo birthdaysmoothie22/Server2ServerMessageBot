@@ -1,0 +1,16 @@
+discord.py - https://discordpy.readthedocs.io/en/stable/
+dotenv - https://pypi.org/project/python-dotenv/
+
+.env example:
+The server2server message bot requires two parameters in its .env file:
+1) [BOT_KEY] - this is the discord bot key that you will get after you create a discord bot
+2) [CHANNEL_ID_PAIRS] - this is a python dictionary of Discord channel ids.  The key of the pay is the sender channel id and the value is the receiver channel id.
+
+The bot only sends messages one way.  So any messages that are sent in the receiver channel do not get sent to the sender channel.  Only sender to receiver.
+
+Here is an example of what a .env file will look like:
+
+BOT_KEY=<discord_bot_key>
+CHANNEL_ID_PAIRS={"sender_channel_id_1" : receiver_channel_id_1, "sender_channel_id_2" : receiver_channel_id_2}
+
+The bot needs to be in both servers in order for this to work
